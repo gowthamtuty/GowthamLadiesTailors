@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gowtham Ladies Tailors | Perfect Fit, Beautiful Style</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf8;
+      color: #381323;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #3b1026;
+      color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-style: italic;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 14px;
+      text-align: center;
+      font-style: normal;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffb5d0;
+    }
+
+    .hero {
+      min-height: 440px;
+      padding: 65px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #fff5ef 0%, #fff5ef 42%, #fff0e8bb 60%, transparent 100%),
+        url("https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 520px;
+    }
+
+    .eyebrow {
+      color: #a52b59;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.08;
+      margin: 12px 0;
+    }
+
+    h1 em {
+      color: #9e2453;
+    }
+
+    .hero p {
+      margin: 16px 0 25px;
+      max-width: 430px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #851d48;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #54102d;
+      transform: translateY(-2px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      gap: 15px;
+      padding: 25px 8%;
+      background: #f9e9ef;
+    }
+
+    .feature {
+      font-size: 14px;
+    }
+
+    .feature strong {
+      display: block;
+      color: #851d48;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 55px 8%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: #681438;
+    }
+
+    .section-title p {
+      color: #78616b;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+      color: #64515a;
+    }
+
+    .services {
+      background: #fff0f4;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #f0d6e0;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px #53152b18;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-info {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .service-info h3 {
+      color: #851d48;
+      margin-bottom: 6px;
+    }
+
+    .service-info p {
+      font-size: 14px;
+      color: #76636b;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .contact {
+      background: #3b1026;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      margin: 10px 0;
+    }
+
+    .contact .btn {
+      background: #e94d83;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #27091a;
+      color: #f8dce7;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 45px 7%;
+        background:
+          linear-gradient(90deg, #fff5eff2, #fff5efcf),
+          url("https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=900&q=80")
+          center/cover;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card img {
+        height: 140px;
+      }
+
+      .gallery-grid img {
+        height: 150px;
+      }
+
+      section {
+        padding: 40px 6%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .service-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      Gowtham
+      <span>LADIES TAILORS</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Traditional Stitching · Modern Designs</div>
+        <h1><em>Gowtham</em><br>Ladies Tailors</h1>
+        <p><strong>Your Style + Our Stitching = Perfect Fit</strong></p>
+        <p>
+          We stitch beautiful women's wear with care, comfort
+          and elegance. From everyday outfits to special occasions,
+          we bring your style to life.
+        </p>
+        <a class="btn" href="#contact">Book Your Order →</a>
+      </div>
+    </section>
+
+    <div class="features">
+      <div class="feature">✂️ <strong>Perfect Fit</strong>Comfortable Stitching</div>
+      <div class="feature">♡ <strong>Premium Quality</strong>Neat Finishing</div>
+      <div class="feature">✿ <strong>Latest Designs</strong>Traditional & Modern</div>
+      <div class="feature">✓ <strong>Customer Care</strong>Personal Attention</div>
+    </div>
+
+    <section class="about" id="about">
+      <img
+        src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+        alt="Traditional Indian women's fashion"
+      >
+
+      <div>
+        <div class="eyebrow">About Us</div>
+        <h2>Stitching Your Dreams with Love</h2>
+        <p>
+          Welcome to Gowtham Ladies Tailors, your destination
+          for beautiful women's tailoring and custom stitching.
+        </p>
+        <p>
+          We focus on fitting, quality, elegant designs and
+          careful finishing to help you feel confident in every outfit.
+        </p>
+        <p><strong>♡ Your Dream Outfit, Our Passion</strong></p>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-title">
+        <div class="eyebrow">What We Do</div>
+        <h2>Our Tailoring Services</h2>
+        <p>Made with care. Stitched to suit your style.</p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Blouse design">
+          <div class="service-info">
+            <h3>Blouse Stitching</h3>
+            <p>Elegant blouses for weddings and everyday wear.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e7?auto=format&fit=crop&w=600&q=80" alt="Traditional outfit">
+          <div class="service-info">
+            <h3>Salwar Suits</h3>
+            <p>Comfortable and stylish salwar suit stitching.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Indian fashion">
+          <div class="service-info">
+            <h3>Churidars</h3>
+            <p>Beautiful outfits tailored to your measurements.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Elegant dress">
+          <div class="service-info">
+            <h3>Lehengas</h3>
+            <p>Traditional looks for celebrations and occasions.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Fashion clothing">
+          <div class="service-info">
+            <h3>Kurtis</h3>
+            <p>Everyday fashion with a personalised fit.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" alt="Women's dress">
+          <div class="service-info">
+            <h3>Custom Designs</h3>
+            <p>Share your ideas and create your own style.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-title">
+        <div class="eyebrow">Our Collection</div>
+        <h2>Design Inspiration</h2>
+        <p>Explore styles for your next beautiful outfit.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Fashion inspiration 1">
+        <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e7?auto=format&fit=crop&w=600&q=80" alt="Fashion inspiration 2">
+        <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Fashion inspiration 3">
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Let's Stitch Something Beautiful!</h2>
+      <p>Have a design in mind? Contact us to discuss your order.</p>
+      <p>📍 Tuticorin, Tamil Nadu</p>
+      <a
+        class="btn"
+        href="https://wa.me/91YOURNUMBER?text=Hello%20Gowtham%20Ladies%20Tailors%2C%20I%20would%20like%20to%20place%20an%20order."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chat on WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gowtham Ladies Tailors. All rights reserved.</p>
+    <p>Made with ♡ for beautiful stitching.</p>
+  </footer>
+
+</body>
+</html>
